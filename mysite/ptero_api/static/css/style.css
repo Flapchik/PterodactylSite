@@ -1,0 +1,77 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль для контейнера страницы */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для заголовков */
+h1, h2 {
+    color: #333;
+}
+
+/* Стиль для списка файлов */
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-item {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-item:hover {
+    background-color: #f9f9f9;
+}
+
+.file-item .file-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.file-item .file-info {
+    font-size: 14px;
+    color: #777;
+}
+
+.file-item .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file-item .download-btn:hover {
+    background-color: #45a049;
+}
+
+.back-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #e53935;
+}

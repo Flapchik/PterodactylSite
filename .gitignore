@@ -1,0 +1,52 @@
+# Виртуальное окружение
+venv/
+
+# Конфигурационные файлы среды
+mysite/.env
+
+# Базы данных SQLite
+mysite/db.sqlite3
+
+# Файлы миграций
+mysite/ptero_api/migrations/*
+
+# Логи Django
+mysite/*.log
+
+# Файлы скомпилированного Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Папки с временными файлами
+*.bak
+*.swp
+*.swo
+
+# IDE и редакторы
+.vscode/
+.idea/
+
+# Установленные библиотеки
+*.egg
+*.egg-info
+dist/
+build/
+
+# Файлы с пакетами и зависимостями
+*.tar.gz
+*.whl
+*.zip
+
+# Тестовые файлы
+coverage/
+*.cover
+*.tox
+*.nox
+*.coverage
+nosetests.xml
+test_*.xml
+
+# Backup-файлы
+*.bak
+*.tmp

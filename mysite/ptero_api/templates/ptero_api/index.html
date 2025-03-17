@@ -1,0 +1,44 @@
+{% load static %}
+{% load custom_filters %}  {# Подключаем фильтр #}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файлы сервера</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Файлы в {{ current_directory }}</h1>
+
+        {% if parent_directory %}
+        <a href="?directory={{ parent_directory }}" class="back-btn">Назад</a>
+        {% endif %}
+
+        <ul class="file-list">
+            {% for file in files %}
+            <li class="file-item">
+                {% if file.is_file %}
+                    <!-- Если это файл, показываем ссылку на скачивание -->
+                    <span class="file-name">📄 {{ file.name }}</span>
+                    <span class="file-info">{{ file.size|format_size }}, изменён {{ file.modified_at|format_date }}</span>
+                    <a href="{% url 'download_file' file.path|urlencode %}" class="download-btn">📥 Скачать</a>
+                {% else %}
+                    <!-- Если это папка, делаем её ссылкой для перехода внутрь -->
+                    <a href="?directory={{ file.path }}" class="folder-link">📁 {{ file.name }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
