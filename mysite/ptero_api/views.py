@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 api = PterodactylClient(settings.PTERO_PANEL_URL, settings.PTERO_API_KEY)
 
 # Базовая директория
-BASE_DIRECTORY = "Resources/Maps"
+BASE_DIRECTORY = "bin/Content.Server/data/Maps/development"
 
 
 def list_files_view(request):
